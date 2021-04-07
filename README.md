@@ -21,12 +21,12 @@ Before you begin, ensure you have met the following requriments:
 
 ### Installing
 
-* Please visit <https://jonathanyulan99.github.io/HTML/announcementsStudent.html>
+* Please visit <qcdavida.github.io/HTML/academics.html>
 * Ensure that all necessary supporting folders(.css, .js, etc...) are accessible
 
 ### Executing program
 
-* Log-In using your CUNY-affiliated information via <jonathanyulan99.github.io/HTML/loginpage.html>
+* Log-In using your CUNY-affiliated information via <qcdavida.github.io/HTML/academics.html>
 * Once logged-in; please ensure that your credentials match your authenticity 
 * Utilize the website as an application, where you can access several related academic fields of your choosing via a navigation bar 
 
