@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:900italic);
+
+@media (max-width: 900px)
+{}.nav-bar {
+    border-radius: 0!important;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex-grow: 1;
+}
+
+.container-inner {
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.schedule{
+    padding-bottom: 5%;
+}
+
+.navbarlogo {
+    float: left;
+}
+
+.nav-bar-inner {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    background: #F5F3EE;
+}
+
+.nav-bar-inner a {
+    float: left;
+    display: block;
+    color: darkblue;
+    text-align: center;
+    padding: 5px 33px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.nav-bar-inner a:hover {
+    background: #153983;
+    color:white;    
+}
+
+.profDetails{
+    display:flex;
+    flex-direction:row;
+    column-gap:25%;
+    border: 3px solid black;
+    margin-bottom: 5%;
+    margin-top: 3%;
+}
+
+.overview{
+    box-sizing: border-box;
+    padding-bottom: 5%;
+}
+.maincontent{
+    display: flex;
+}
+
+.leftcontent, .rightcontent, .centercontent {
+    flex: 33.33%;
+    padding: 5px;
+}
+
+.btn{
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    background-color:#153983;
+    border-color: #153983;
+    border-width: 3px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 1.25rem;
+    border-radius: .3rem;
+    line-height: 1.5;
+    text-decoration: none;
+    color:white;
+}
+
+.nextTermSchedule, .shoppingCart{
+    display:flex;
+    flex-direction:row;
+    column-gap:25%;
+    border: 3px solid black;
+    padding-top: 3%;
+    border-collapse: collapse;
+    border-spacing: 5px;
+    margin-bottom: 3%;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* a:link {
+    color:inherit;
+}
+  */
+/* a {color: purple;}
+a:visited {color:#7D1935;}
+a:hover {color: black;}
+a:active {color:#7D1935;} */
