@@ -52,7 +52,7 @@ Before you begin, ensure you have met the following requriments:
 
 ### David
 
-*Created, styled, add functionality to the following pages:
+**Created, styled, add functionality to the following pages:
 	*student center <https://qcdavidagithubio.reydavid86.repl.co/html/student/student-center.html>
 	*enrollment <https://qcdavidagithubio.reydavid86.repl.co/html/student/enrollment-overview.html>
 	*financial aid <https://qcdavidagithubio.reydavid86.repl.co/html/student/financial-aid.html>
