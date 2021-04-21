@@ -32,7 +32,7 @@ Before you begin, ensure you have met the following requriments:
 * Utilize the website as an application, where you can access several related academic fields of your choosing via a navigation bar 
 
 ## Authors
-### David Acqui
+### David Acuqui
 ### Email: reydavid86@gmail.com
 ### Jonathan Yulan
 ### Email: jzy50@gmail.com
