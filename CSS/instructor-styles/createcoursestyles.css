@@ -1,11 +1,23 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:900italic);
 
-@media (max-width: 900px)
-{}.nav-bar {
-    border-radius: 0!important;
-}
+/* color schemes:
+Set being used across the site:
+light orange - #fbe8a6
+pastel orange - #f4976c
+dark blue - #303c6c
+cyan ish - #b4dfe5
+cyan - #d2fdff
 
-.container {
+One set of blues:
+teal blueish - #31708e
+lighter than prev - #5085a5
+lighter than prev - #8fc1e3
+blue - #0074e1
+*/
+
+/* Styling for body */
+
+.prof-create-courses-main-container{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -13,11 +25,20 @@
     flex-grow: 1;
 }
 
-.navbarlogo {
-    float: left;
+.prof-create-courses-inner-container{
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
-.nav-bar-inner {
+/* Styling for nav bar*/
+
+.nav-bar-logo{
+    float: left;
+    line-height: 55px;
+}
+
+.nav-bar{
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -26,27 +47,59 @@
     background: #F5F3EE;
 }
 
-.nav-bar-inner a {
+.nav-bar a{
     float: left;
     display: block;
     color: darkblue;
     text-align: center;
-    padding: 5px 33px;
+    padding: 1px 44px;
     text-decoration: none;
-    margin-top: 15px;
+    line-height: 65px;
 }
 
-.nav-bar-inner a:hover {
+.nav-bar a:hover{
     background: #153983;
     color:white;    
 }
 
-#addClassHeader{
-    padding-top: 5%;
-    margin-left: 5%;
+/* Styling for first div*/
+
+#create-class-header{
+    float: left;
+    flex: 33.33%;
+    padding: 5px;
+    display: flex;
 }
 
-#addClassTable{
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #31708e;
+    border-radius: 4px;
+    background-color:lightblue;
+}
+
+input[type=text]:focus{
+    background-color: #31708e;
+}  
+
+#term-selection{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #31708e;
+    border-radius: 4px;
+    background-color: #8fc1e3;
+}
+
+#term-selection:focus{
+    background-color: lightblue;
+}
+
+#create-course-table{
     display:flex;
     flex-wrap:wrap;
     flex-direction: column;
@@ -55,18 +108,110 @@
     padding-top: 5%;
 }
 
-#addTable1{
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    margin-right: 5%;
+#create-form{
+    padding-top: .4%;
+    margin-right: 15%;
+    margin-top: 4%;
 }
 
-#addTable2{
-    display:flex;
-    flex-direction: column;
+.flex-item-image{
+    padding-top: 4%;
+    float: right;
+    padding-bottom: 5%;
 }
 
+h3{
+    border: 3px solid #303c6c;
+    padding: 2%;
+    background-color: #8fc1e3;
+}
+
+#btn{
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid black;
+    border-color: #153983;
+    border-width: 3px;
+    background-color:#153983;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 90px;
+    border-radius: .3rem;
+    line-height: 1.5;
+    box-shadow: 10px 5px 0px #31708e;
+}
+
+/*CSS selector working on the footer*/
 footer{
-    padding-top:50px;
+    display:flex;
+    background-color: #555;
+    color: #bbb;
+    justify-content: space-between;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+footer a{
+    text-decoration: none;
+    color: #eee;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.footer-main{
+    padding: 1.25rem 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-main-item{
+    padding: 1.25rem;
+    min-width: 12.5rem /*200px*/;
+}
+
+.footer-main-item ul{
+    display:-webkit-inline-flex;
+}
+
+.footer-main-item li{
+    padding-left:.5em;
+    padding-right:.5em;
+}
+
+.footer-main-social-media{
+    padding: 0 1.875rem 1.25rem;
+    list-style: none;
+}
+
+.footer-social{
+    display: flex;
+    justify-content: center;
+    border-top: 1px #777 solid;
+    padding-top: 1.25rem;
+}
+
+.footer-social li {
+    margin: 0.5rem;
+    font-size: 1.25rem;
+}
+
+/*CSS to work on the icons for the footer*/
+
+.fa-facebook-f, .fa-flickr, .fa-twitter-square, .fa-youtube{
+    font-size: 50px; color: #eee;
+    justify-items: center;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
 }

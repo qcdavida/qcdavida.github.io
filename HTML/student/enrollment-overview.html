@@ -1,22 +1,42 @@
 <!DOCTYPE html>
+<!-- Project code by: Jonathan Yulan and David Acuqui -->
+<!--
+  Name: David Acuqui and Jonathan Yulan 
+  Date: 04.17.2021
+  Section: CS 355-54
+
+  This page gives the student an overview of their class schedule, as well as three actions buttons: drop a course,
+  add/search a course, and finally swap a course.
+
+  Photos taken from https://unsplash.com/ (search keywords: college, professor, student)
+-->
+
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link href="../../css/student-styles/enrollmentstyles.css" rel="stylesheet">
         <title>Enrollment</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--Javascript resource taken from https://kit.fontawesome.com/a63... that will  be used to display the logos
+            in our footer bar-->
+        <script src="https://kit.fontawesome.com/a6360b8855.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
         <div class="enrollment-main-container">
             <nav class="nav-bar">
-                <img class="nav-bar-logo" src="../../images/CUNYfirst.png" alt="cunyFirstLogo" width="125">
+                <a href="../student/cuny-announcements.html"><img class="nav-bar-logo" src="../../images/CUNYfirst.png" alt="cuny-first-logo"  width="125"/></a>
                 <a href="../student/cuny-announcements.html">Announcements</a>
                 <a href="../student/student-center.html">Student Center</a>
                 <a href="../student/academics.html">Academics</a>
                 <a href="../student/enrollment-overview.html">Enrollment</a>
                 <a href="../student/financial-aid.html">Financial Aid</a>
                 <a href="../student/important-links.html">Important Links</a>
-                <a href="../loginpage.html" class="dropdown-toggle">My Account</a>
+                <a href="../loginpage.html">My Account</a>
+                <form action="../student/add-search-courses.html">
+                    <input type="text" placeholder="Search courses.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
             </nav>
             
             <div class="enrollment-inner-container">
@@ -28,18 +48,18 @@
                         
                 <div class="enroll-main-content">
                     <div id="enroll-left-panel">
-                        <a href="../HTML/enrollmentAddSearch.html"><img src="../../images/student.jpg" alt="enroll-stud-img1" id="enroll-stud-img1" style="width:100%"/></a>
-                        <a class="btn1" href="../HTML/enrollmentAddSearch.html" title="Click here to add/search classes">Add/Search courses</a>
+                        <a href="../student/add-search-courses.html"><img src="../../images/student.jpg" alt="enroll-stud-img1" id="enroll-stud-img1" style="width:100%"/></a>
+                        <a class="btn1" href="../student/add-search-courses.html" title="Click here to add/search classes">Add/Search courses</a>
                     </div>
                     
                     <div id="enroll-center-panel">
-                        <a href="../HTML/enrollmentSwap.html"><img src="../../images/student4.jpg" alt="enroll-stud-img2" id="enroll-stud-img2" style="width:100%"/></a>
-                        <a class="btn2" href="../HTML/enrollmentSwap.html" title="Click here to swap classes">Swap courses</a>
+                        <a href="../student/swap-courses.html"><img src="../../images/student4.jpg" alt="enroll-stud-img2" id="enroll-stud-img2" style="width:100%"/></a>
+                        <a class="btn2" href="../student/swap-courses.html" title="Click here to swap classes">Swap courses</a>
                     </div>
                     
                     <div id="enroll-right-panel">
-                        <a href="../HTML/enrollmentDrop.html"><img src="../../images/student5.jpg" alt="enroll-stud-img3" id="enroll-stud-img3" style="width:100%"/></a>
-                        <a class="btn3" href="../HTML/enrollmentDrop.html" title="Click here to drop classes">Drop courses</a>
+                        <a href="../student/drop-courses.html"><img src="../../images/student5.jpg" alt="enroll-stud-img3" id="enroll-stud-img3" style="width:100%"/></a>
+                        <a class="btn3" href="../student/drop-courses.html" title="Click here to drop classes">Drop courses</a>
                     </div>
                 </div> <!--End of enroll-main-content-->
 
@@ -78,48 +98,68 @@
                         </table>
                     </div> <!--End of enroll-shopping-cart-->
                 </div> <!--End of ROW-->
-                    <div class="enroll-next-term-cart">
-                        <table id="next-term-shopping-cart">
-                            <thead>
-                                <caption>Summer 2021 Schedule:</caption>
-                                <tr>
-                                    <th>Class</th>
-                                    <th>Description</th>
-                                    <th>Day and Times</th>
-                                    <th>Room</th>
-                                    <th>Instructor</th>
-                                    <th>Units</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>CSCI 361-37</td>
-                                    <td>Numerical Methods (Lecture)</td>
-                                    <td>MoTuWeTh 4:00PM - 5:34PM</td>
-                                    <td>Online-Synchronous</td>
-                                    <td>A. Smith-Thompson</td>
-                                    <td>3.00</td>
-                                    <td>Open</td>
-                                </tr>
-                                <tr>
-                                    <td>ARTH 102-01 (5307)</td>
-                                    <td>History of Western Art II </td>
-                                    <td>MoTuWeTh 1:00PM - 4:30PM</td>
-                                    <td>Online-Synchronous</td>
-                                    <td>Herbert Hartel Jr</td>
-                                    <td>3.00</td>
-                                    <td>Open</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div> <!--End of enroll-next-term-cart-->
-                
-                <footer>
-                    Some Sort of Reference Material
-                    <img src="../../images/qcLogo3.png" alt="vintageQcLogo"/>
-                    Some sort of Reference Material
-                </footer>
+
+                <div class="enroll-next-term-cart">
+                    <table id="next-term-shopping-cart">
+                        <thead>
+                            <caption>Summer 2021 Schedule:</caption>
+                            <tr>
+                                <th>Class</th>
+                                <th>Description</th>
+                                <th>Day and Times</th>
+                                <th>Room</th>
+                                <th>Instructor</th>
+                                <th>Units</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CSCI 361-37</td>
+                                <td>Numerical Methods (Lecture)</td>
+                                <td>MoTuWeTh 4:00PM - 5:34PM</td>
+                                <td>Online-Synchronous</td>
+                                <td>A. Smith-Thompson</td>
+                                <td>3.00</td>
+                                <td>Open</td>
+                            </tr>
+                            <tr>
+                                <td>ARTH 102-01 (5307)</td>
+                                <td>History of Western Art II </td>
+                                <td>MoTuWeTh 1:00PM - 3:55PM</td>
+                                <td>Online-Synchronous</td>
+                                <td>Herbert Hartel Jr</td>
+                                <td>3.00</td>
+                                <td>Open</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!--End of enroll-next-term-cart-->
+
+                <footer class="footer-cuny-wide">
+                    <section class="footer-main">
+                        <div class="footer-main-item">
+                            <ul>
+                                <li><a href="https://www.cuny.edu/website/copyright/">Copyright 2021 |</a></li>
+                                <li><a href="https://www.cuny.edu/website/privacy-policy/">Privacy |</a></li>
+                                <li><a href="https://www.cuny.edu/about/administration/offices/cis/information-security/">Security |</a></li>
+                                <li><a href="https://www.cuny.edu/accessibility/">Accessibility |</a></li>
+                                <li><a href="https://www.cuny.edu/website/terms/">Terms of Use |</a></li>
+                                <li><a href="https://www.cuny.edu/cuny-alert/">CUNY Alert |</a></li>
+                                <li><a href="https://www.cuny.edu/contact-us/">Contact Us |</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    </section>
+                    <section class="footer-main-social-media">
+                        <div class="footer-social">
+                            <li><a href="https://www.facebook.com/CUNYedu"><i class="fab fa-facebook-f"></i> </a></li>
+                            <li><a href="https://twitter.com/cuny"><i class="fab fa-twitter-square"></i></i> </a></li>
+                            <li><a href="https://www.youtube.com/channel/UC9t20Xexjtp5FbbIF3vVAZw"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="https://www.flickr.com/photos/cunyedu/"><i class="fab fa-flickr"></i> </a></li>
+                        </div>
+                    </section>
+                </footer> <!-- end of the footer -->
             </div> <!--End of enrollment-inner-container-->
         </div><!--End of enrollment-main-container-->
     </body>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- Project code by: Jonathan Yulan and David Acuqui -->
+<!--
+  Name: David Acuqui and Jonathan Yulan
+  Date: 04.17.2021
+  Section: CS 355-54
+
+  This page displays the search results when a student searches for a certain course.
+
+  Photos taken from https://unsplash.com/ (search keywords: college, professor, student)
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="../../css/student-styles/searchresultsstyles.css" type="text/css" rel="stylesheet">
+        <title>Search Results</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="../../javascript/jquery-3.0.0.min.js"></script>
+        <script src="../../javascript/infiniteScroll.js"></script>
+
+        <script>
+            $(function() {
+                $("tr[colspan=3]").find("div").hide();
+                $("tr").click(function(event) {
+                    var $target = $(event.target);
+                    $target.closest("tr").next().find("div").slideToggle();                
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="search-results-main-container">
+            <nav class="nav-bar">
+                <a href="../student/cuny-announcements.html">
+                    <img class="nav-bar-logo" src="../../images/CUNYfirst.png" alt="cuny-first-logo"  width="125"/></a>
+                <a href="../student/cuny-announcements.html">Announcements</a>
+                <a href="../student/student-center.html">Student Center</a>
+                <a href="../student/academics.html">Academics</a>
+                <a href="../student/enrollment-overview.html">Enrollment</a>
+                <a href="../student/financial-aid.html">Financial Aid</a>
+                <a href="../student/important-links.html">Important Links</a>
+                <a href="../loginpage.html">My Account</a>
+                <form action="../student/add-search-courses.html">
+                    <input type="text" placeholder="Search courses.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </nav>
+
+            <main class="search-results-inner-container">
+                <div class="search-results-stud-details">
+                    <div><p id="results-stud-name-header">Full Name:</p><p id="results-stud-fullname">Francisco Lindor</p></div>
+                    <div><p id="results-sems-header">Semester:</p><p id="results-semester">Summer 2021</p></div>
+                    <div><p id="results-college-header">College:</p><p id="results-current-college">Queens College</p></div>
+                </div>
+
+                <div class="special-content1">
+                    <div class="fade-in-block">
+                        <p class="special-p1">Displaying results for course XXX - Click the course to expand for more info.</p>
+                    </div>
+                </div>
+
+                <div id="display-results">
+                    <table id="list-courses-table">
+                        <caption id="course-id-caption">CSCI 355</caption>
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Section</th>
+                                <th>Prof</th>
+                                <th>Days</th>
+                                <th>Times</th>
+                                <th>Status</th>
+                                <th>Select Course</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>47031</td>
+                                <td>31</td>
+                                <td>Mark Abramov</td>
+                                <td>Mon/Wed</td>
+                                <td>6:30PM - 7:45PM</td>
+                                <td>Open</td>
+                                <td><input type="checkbox" />    &nbsp;   </td>
+                            </tr>
+                            <tr colspan=3>
+                                <td colspan= 7>
+                                    <div>
+                                        <h3>Additional Information</h3>
+                                        <h4>Description:</h4>
+                                        <p>
+                                            Internet protocol stack, analysis of representation protocols; 
+                                            Internet applications: client-server architecture, popular Internet 
+                                            application protocols, Internet application design, client side 
+                                            programming, server side programming, Web application and website 
+                                            design; programming projects.
+                                        </p>
+                                        <h4>Room:</h4>
+                                        <p>Online-Synchronous</p>
+                                        <h4>Credits:</h4>
+                                        <p>3.00</p>
+                                        <h4>Class Capacity:</h4>
+                                        <p>32/32</p>
+                                        <h4>Begin date:</h4>
+                                        <p>8/25/2021 - 12/21/2021</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>47036</td>
+                                <td>46</td>
+                                <td>Raymond Law</td>
+                                <td>Sat</td>
+                                <td>9:10AM - 11:50AM</td>
+                                <td>Closed</td>
+                                <td><input type="checkbox" />    &nbsp;   </td>
+                            </tr>
+                            <tr colspan=3>
+                                <td>
+                                    <div>
+                                        <h3>Additional Information</h3>
+                                        <h4>Description:</h4>
+                                        <p>
+                                            Internet protocol stack, analysis of representation protocols; 
+                                            Internet applications: client-server architecture, popular Internet 
+                                            application protocols, Internet application design, client side 
+                                            programming, server side programming, Web application and website 
+                                            design; programming projects.
+                                        </p>
+                                        <h4>Room:</h4>
+                                        <p>Online-Synchronous</p>
+                                        <h4>Credits:</h4>
+                                        <p>3.00</p>
+                                        <h4>Class Capacity:</h4>
+                                        <p>14/32</p>
+                                        <h4>Begin date:</h4>
+                                        <p>8/25/2021 - 12/21/2021</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div> <!-- end of display-results div -->
+            </main><!-- end of search-results-main-container -->
+        </div><!-- end of search-results-main-container -->
+    </body>
+</html>

@@ -1,12 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:900italic);
 
-@media (max-width: 900px)
-{}.nav-bar {
-    border-radius: 0!important;
-}
+/* color schemes:
+Set being used across the site:
+light orange - #fbe8a6
+pastel orange - #f4976c
+dark blue - #303c6c
+cyan ish - #b4dfe5
+cyan - #d2fdff
+
+One set of blues:
+teal blueish - #31708e
+lighter than prev - #5085a5
+lighter than prev - #8fc1e3
+blue - #0074e1
+*/
+
 
 /* Styling for body */
-
 .stud-ctr-main-container{
     position: relative;
     display: flex;
@@ -41,9 +51,15 @@
     display: block;
     color: darkblue;
     text-align: center;
-    padding: 1px 33px;
+    padding: 1px 16px;
     text-decoration: none;
     line-height: 65px;
+}
+
+.nav-bar input[type=text]{
+    color:white;
+    margin-top: 2%;
+    padding-right: .8%;
 }
 
 .nav-bar a:hover{
@@ -71,7 +87,7 @@
     font-size: 20px;
 }
 
-/* Styling for infinit scroll/special content */
+/* Styling for infinite scroll/special content */
 
 .fade-in-block{
     opacity: 0;
@@ -92,10 +108,12 @@
 
 p.special-p1{
     font-family: 'Lato', sans-serif;
+    min-height: 250px;
     padding-top: 10%;
     padding-left: 35%;
-    font-size: 20px;
-    color: #303c6c;
+    font-size: 50px;
+    color: #31708e;
+    text-align: center;
 }
 
 .special-content2{
@@ -111,10 +129,12 @@ p.special-p1{
 
 p.special-p2{
     font-family: 'Lato', sans-serif;
+    min-height: 250px;
     padding-top: 10%;
-    padding-left: 60%;
-    font-size: 20px;
-    color: black;
+    padding-left: 35%;
+    font-size: 50px;
+    color: #31708e;
+    text-align: center;
 }
 
 /* Styling for table */
@@ -133,8 +153,8 @@ p.special-p2{
         #fbe8a6 5rem,
         transparent 1rem,
         transparent 100%
-      );
-      background-color: oldlace;
+    );
+    background-color: oldlace;
 }
 
 .student-schedule caption{
@@ -172,7 +192,7 @@ tr:nth-child(odd){
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 500px;
+    width: 700px;
     border: 3px black solid;
     margin: 0 auto;
     padding: 2%;
@@ -182,7 +202,7 @@ tr:nth-child(odd){
 }
 
 #urgent-info-panel1, #urgent-info-panel2, #urgent-info-panel3{
-    width: 100px;
+    width: 150px;
     height: 200px;
     border: 1px black solid;
     background: #eee;
@@ -192,4 +212,75 @@ tr:nth-child(odd){
 
 #urgent-info-panel1 > h4, #urgent-info-panel2 > h4, #urgent-info-panel3 > h4{
     text-decoration: underline;
+}
+
+/*CSS selector working on the footer*/
+
+footer{
+    display:flex;
+    background-color: #555;
+    color: #bbb;
+    justify-content: space-between;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+footer a{
+    text-decoration: none;
+    color: #eee;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.footer-main{
+    padding: 1.25rem 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-main-item{
+    padding: 1.25rem;
+    min-width: 12.5rem /*200px*/;
+}
+
+.footer-main-item ul{
+    display:-webkit-inline-flex;
+}
+
+.footer-main-item li{
+    padding-left:.5em;
+    padding-right:.5em;
+}
+
+.footer-main-social-media{
+    padding: 0 1.875rem 1.25rem;
+    list-style: none;
+}
+
+.footer-social{
+    display: flex;
+    justify-content: center;
+    border-top: 1px #777 solid;
+    padding-top: 1.25rem;
+}
+
+.footer-social li {
+    margin: 0.5rem;
+    font-size: 1.25rem;
+}
+
+/*CSS to work on the icons for the footer*/
+
+.fa-facebook-f, .fa-flickr, .fa-twitter-square, .fa-youtube{
+    font-size: 50px; color: #eee;
+    justify-items: center;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
 }

@@ -1,108 +1,124 @@
 <!DOCTYPE html>
+<!-- Project code by: David Acuqui and Jonathan Yulan  -->
+<!--
+    Name: David Acuqui and Jonathan Yulan
+    Date: 04.17.2021
+    Section: CS 355-
+
+    This webpage is the announcement page for the student side of CUNY system website.
+    It has a calendar for browsing, as well as alerts and pertinent information to the student
+    to include his/her name displayed. It has a future interactive menu portion that will be implemented later.
+    This webpage was created, designed by David and Jonathan for CS355 D3.
+-->
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link href="/CSS/student-styles/announcementstyles.css" rel="stylesheet">
-        <title>Announcements</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="../../css/student-styles/announcementstyles.css" rel="stylesheet">
+        <title>Announcements</title>
+
+        <!--Javascript resource taken from https://kit.fontawesome.com/a63... that will  be used to display the logos
+            in our footer bar-->
+        <script src="https://kit.fontawesome.com/a6360b8855.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
         <div class="announcement-main-container">
                 <nav class="nav-bar">
-                    <img class="nav-bar-logo" src="Images/CUNYfirst.png" alt="cunyFirstLogo" width="125">
+                    <a href="../student/cuny-announcements.html"><img class="nav-bar-logo" src="../../images/CUNYfirst.png" alt="cuny-first-logo"  width="125"/></a>
                     <a href="../student/cuny-announcements.html">Announcements</a>
                     <a href="../student/student-center.html">Student Center</a>
                     <a href="../student/academics.html">Academics</a>
                     <a href="../student/enrollment-overview.html">Enrollment</a>
                     <a href="../student/financial-aid.html">Financial Aid</a>
                     <a href="../student/important-links.html">Important Links</a>
-                    <a href="../loginpage.html" class="dropdown-toggle">My Account</a>
+                    <a href="../loginpage.html">My Account</a>
+                    <form action="../student/add-search-courses.html">
+                        <input type="text" placeholder="Search courses.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
                 </nav>
 
             <div class="announcement-inner-container">
-                <div class="announcement-display">
-                    <div><p id="student-name"><b>Full Name:</b></p><p id="student-name-display">Francisco Lindor</p></div>
-                    <div><p id="student-id"><b>ID#:</b></p><p id="student-id-display">23341538</p></div>
-                    <div><p id="student-term"><b>Term:</b></p><p id="student-term-display"> Spring '21</p></div>
-                    <div><p id="student-uni"><b>University:</b></p><p id="student-uni-display">Queens College</p></div>
+                <div class="announcement-stud-details">
+                    <div><p id="announcement-stud-name-header"><b>Full Name:</b></p><p id="announcement-stud-name">Francisco Lindor</p></div>
+                    <div><p id="announcement-stud-id-header"><b>ID#:</b></p><p id="announcement-stud-id">23341538</p></div>
+                    <div><p id="announcement-stud-term-header"><b>Term:</b></p><p id="announcement-stud-term"> Spring '21</p></div>
+                    <div><p id="announcement-stud-uni-header"><b>University:</b></p><p id="announcement-stud-uni">Queens College</p></div>
                 </div> <!-- end of announcement-display-->
-                <div class="announcement-stud-calendar">
-                        <div class="current-date">
-                            <div class="currentDate">
-                                <p id="current-date-caption-day">Day, XXth</p>
-                                <p id="current-date-caption-month">Month XXXX</p>
-                            </div>
-                                <ul class="studentCalendar">
-                                            <li>SUN</li>
-                                            <li>MON</li>
-                                            <li>TUE</li>
-                                            <li>WED</li>
-                                            <li>THUR</li>
-                                            <li>FRI</li>
-                                            <li>SAT</li>
-                                            <li>1</li>
-                                            <li>2</li>
-                                            <li>3</li>
-                                            <li>4</li>
-                                            <li>5</li>
-                                            <li>6</li>
-                                            <li>7</li>
-                                            <li>8</li>
-                                            <li>9</li>
-                                            <li>10</li>
-                                            <li>11</li>
-                                            <li>12</li>
-                                            <li>13</li>
-                                            <li>14</li>
-                                            <li>15</li>
-                                            <li>16</li>
-                                            <li>17</li>
-                                            <li>18</li>
-                                            <li>19</li>
-                                            <li>20</li>
-                                            <li>21</li>
-                                            <li>22</li>
-                                            <li>23</li>
-                                            <li>24</li>
-                                            <li>25</li>
-                                            <li>26</li>
-                                            <li>27</li>
-                                            <li>28</li>
-                                            <li>29</li>
-                                            <li>30</li>
-                                            <li>31</li>
-                                            <li>1</li>
-                                            <li>2</li>
-                                            <li>3</li>
-                                            <li>4</li>
-                                </ul> <!-- end of the calendar-->
-                            </div>
 
-                            <div class="announcement-student-specific-info2"><p id="announcement-student-specific-info2"> Student Specific Info2</p></div> <!-- end of the container for announcement-stud-specific2 div-->
-                            <div class="announcement-student-specific-info3"><p id="announcement-student-specific-info3"> Student Specific Info3</p></div> <!-- end of the container for announcement-stud-specific3 div-->
-                        </div> <!-- end of the announcement-stud-calendar -->
+                <div class="announcement-stud-calendar">
+                    <div class="announcement-stud-current-date">
+                        <div class="announcement-student-today-date">
+                                <p id="announcement-student-day">19th</p>
+                                <p id="announcement-student-month">APRIL, 2021</p>
+                            </div>
+                            <ul>
+                                <li>SUN</li>
+                                <li>MON</li>
+                                <li>TUE</li>
+                                <li>WED</li>
+                                <li>THUR</li>
+                                <li>FRI</li>
+                                <li>SAT</li>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                                <li>7</li>
+                                <li>8</li>
+                                <li>9</li>
+                                <li>10</li>
+                                <li>11</li>
+                                <li>12</li>
+                                <li>13</li>
+                                <li>14</li>
+                                <li>15</li>
+                                <li>16</li>
+                                <li>17</li>
+                                <li>18</li>
+                                <li>19</li>
+                                <li>20</li>
+                                <li>21</li>
+                                <li>22</li>
+                                <li>23</li>
+                                <li>24</li>
+                                <li>25</li>
+                                <li>26</li>
+                                <li>27</li>
+                                <li>28</li>
+                                <li>29</li>
+                                <li>30</li>
+                                <li>31</li>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                            </ul> <!-- end of the calendar-->
+                        </div>
+                    <div class="announcement-student-menu"><p> **FUTURE IMPLEMENTATION** INTERACTIVE MENU</p></div> <!-- end of the container for announcement-stud-specific2 div-->
+                    <div class="announcement-student-menu"><p></p></div> <!-- end of the container for announcement-stud-specific3 div-->
+                </div> <!-- end of the announcement-stud-calendar -->
             </div> <!-- end of the announcement-inner-container-->
-            <div class="announcement-student-inner-container">
-                <div class="announcement-student-info2">
-                    <table class="student-info-table">
-                        <caption id="announcement-table-student-info2">IMPORTANT PAYMENT DATES</caption>
-                        <thead>
-                            <tr ><th colspan="2">SPRING 2021 - PAYMENT DUE DATES</th></tr>
+            <div class="announcement-inner-container-2">
+                <div class="announcement-student-important-pay-dates">
+                    <table class="announcement-student-important-pay-dates-table">
+                        <caption>IMPORTANT PAYMENT DATES</caption>
+                        <caption id="announcement-student-table-header">SPRING 2021 - PAYMENT DUE DATES</caption>
+                        <tbody>
                             <tr><td>If you Register:</td><td>Payment is Due</td></tr>
-                        </thead>
-                        <tbody id="announcement-table-student-info2 tbody">
                             <tr><td><p>October28, 2020 - December 18, 2020</p></td><td><p>January 8, 2021</p></td></tr>
                             <tr><td><p>December 19, 2020 - January 22, 2021</p></td><td><p>January 22, 2021</p></td></tr>
                             <tr><td><p>January 23, 2021 or Later</p></td><td><p>Immediately</p></td></tr>
                         </tbody>
                     </table>
-                    <table class="student-info-table">
-                        <thead>
-                            <tr ><th colspan="2">SPRING 2021 - LIABILITY SCHEDULE</th></tr>
-                            <tr><td>If you withdraw or drop your classes:</td><td>Your payment liability is</td></tr>
-                        </thead>
-                            <tbody id="announcement-table-student-info2-2 tbody">
+                    <table class="announcement-student-pay-liability-dates-table">
+                            <caption class="announcement-student-table-header">SPRING 2021 - LIABILITY SCHEDULE</caption>
+                            <tbody>
+                                <tr><td>If you withdraw or drop your classes:</td><td>Your payment liability is</td></tr>
                                 <tr><td><p>On or <b>BEFORE</b> January 28, 2021</p></td><td><p>No Liability</p></td></tr>
                                 <tr><td><p>January 29 - February 4, 2021</p></td><td><p>25% of Tuition</p></td></tr>
                                 <tr><td><p>February 5 - February 11, 2021</p></td><td><p>50% of Tuition</p></td></tr>
@@ -111,38 +127,50 @@
                             </tbody>
                     </table>
                 </div> <!-- end of the announcement-student-info2 -->
-                <div class="announcement-stud-schedule-table">
-                        <table class="announcement-stud-schedule-table table">
-                            <caption id="announcement-stud-schedule-table-header"> CUNYFIRST ALERTS</caption>
-                            <thead id="announcement-stud-schedule-table-thead">
-                                <tr><th colspan="5"><p class="announcement-stud-alert1" id="announcement-stud-alert1-1"><b>CANCELLED</b> - Monthly Maintenance(March 20)</p></th></tr>
+                <div class="announcement-stud-cunyfirst-alert">
+                        <table class="announcement-stud-cunyfirst-alert-table">
+                            <caption> QC First Alerts</caption>
+                            <thead>
+                                <tr><th><p><b>CANCELLED</b> - Monthly Maintenance(March 20)</p></th></tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td colspan="5"><p>The CUNYfirst hosting service provider has cancelled the maintenance scheduled for the Weekend of March 20-21</p></td>
+                                    <td><p>The QC First hosting service provider has cancelled the maintenance scheduled for the Weekend of March 20-21</p></td>
                                 </tr>
                                 <tr>
-                                    <th colspan="5"><p class="announcement-stud-alert1" id="announcement-stud-alert1-2"><b>COMPLETED</b> CUNYfirst migration to CUNY Data Center: March24-28</p></th>
+                                    <th><p><b>COMPLETED</b> QC First migration to QC First Data Center: March24-28</p></th>
                                 </tr>
                                 <tr>
-                                    <td colspan="5"><p>The CUNYfirst system migration to the CUNYfirst data center has completed. Users can now access CUNYfirst</p></td>
+                                    <td><p>The QC First system migration to the QC First data center has completed. Users can now access QC First</p></td>
                                 </tr>
-                                <tr>
-                                    <th colspan="5"><p class="announcement-stud-alert1" id="announcement-stud-alert1-3">Schedule of CUNYfirst Recurring Manitenance</p></th>
-                                </tr>
-                                <tr>
-                                    <td colspan="5"><p>The schedule of CUNYfirst monthly maintenance is available on the <a href="https://www.cuny.edu/about/administration/offices/cis/technology-services/service-maintenance-windows/#:~:text=yearly%20maintenance%20windows.-,CUNYfirst,and%20month%2Dend%20financial%20close.&text=The%20CUNYfirst%20operations%20team%20schedules,at%207pm%20(Eastern%20Time).">Service Maintenance Windows</a> CUNY web site page</p></td>
-                                </tr>
-
                             </tbody>
                         </table>
                     </div> <!-- end of announcement-stud-schedule-table -->
             </div> <!-- end of the announcement-student-inner-container-->
-            <footer>
-            Some Sort of Reference Material
-            <img src="/Images/qcLogo3.png" alt="vintageQcLogo"/>
-            Some sort of Reference Material
-        </footer> <!-- end of the footer -->
+            <footer class="footer-cuny-wide">
+                <section class="footer-main">
+                    <div class="footer-main-item">
+                        <ul>
+                            <li><a href="https://www.cuny.edu/website/copyright/">Copyright 2021 |</a></li>
+                            <li><a href="https://www.cuny.edu/website/privacy-policy/">Privacy |</a></li>
+                            <li><a href="https://www.cuny.edu/about/administration/offices/cis/information-security/">Security |</a></li>
+                            <li><a href="https://www.cuny.edu/accessibility/">Accessibility |</a></li>
+                            <li><a href="https://www.cuny.edu/website/terms/">Terms of Use |</a></li>
+                            <li><a href="https://www.cuny.edu/cuny-alert/">CUNY Alert |</a></li>
+                            <li><a href="https://www.cuny.edu/contact-us/">Contact Us |</a></li>
+                        </ul>
+                    </div>
+                </section>
+                </section>
+                <section class="footer-main-social-media">
+                    <div class="footer-social">
+                        <li><a href="https://www.facebook.com/CUNYedu"><i class="fab fa-facebook-f"></i> </a></li>
+                        <li><a href="https://twitter.com/cuny"><i class="fab fa-twitter-square"></i></i> </a></li>
+                        <li><a href="https://www.youtube.com/channel/UC9t20Xexjtp5FbbIF3vVAZw"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://www.flickr.com/photos/cunyedu/"><i class="fab fa-flickr"></i> </a></li>
+                    </div>
+                </section>
+            </footer> <!-- end of the footer -->
         </div> <!-- end of announcement-main-container -->
     </body>
 </html>
