@@ -19,3 +19,13 @@ blue - #0074e1
   font-family: "Lato", sans-serif;
   background: orangered;
 } */
+
+#left-panel-info,
+#right-panel-info {
+  margin-top: 10%;
+}
+
+#reg-btn,
+#drop-btn {
+  margin-top: 5%;
+}
