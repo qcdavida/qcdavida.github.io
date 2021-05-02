@@ -14,20 +14,22 @@ cyan ish - #b4dfe5
 cyan - #d2fdff
 */
 
-
-#manage-course-container {
-  margin-top: 10%;
+.myNav {
+  /* background-color: #800000; fav thus far also this one ffebcd*/
+  background-color: #800000;
 }
 
-#prof-roster-table {
-  margin-top: 3%;
-  border: 3px solid black;
-  background: oldlace
-    linear-gradient(
-      to bottom,
-      #fbe8a6,
-      #fbe8a6 3rem,
-      transparent 1rem,
-      transparent 100%
-    );
+.navLinks a,
+.navAcctLink a {
+  color: #ecd5bb;
+  font-size: 15px;
+}
+
+.navLinks a:hover,
+.navAcctLink a:hover {
+  color: #54627b;
+}
+
+.navlogo {
+  height: 60px;
 }
